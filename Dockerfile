@@ -10,7 +10,9 @@ RUN mkdir /aurum-common
 WORKDIR /aurum-common
 
 ADD pyproject.toml .
+ADD setup.cfg .
+Add src/ ./src/
 
 RUN python3 -m build
 
-RUN ls dist/
+RUN ls -l dist/
